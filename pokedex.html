@@ -20,11 +20,10 @@
 
         p.getPokemonsList(interval).then(function(response) {
             response.results.forEach(element =>{
-
-            })
+                content.innerHTML += element.name + '<br>'
+            });
         })
       </script>
-      hello ?????
-    made!!!!!
+      
 </body>
 </html>
