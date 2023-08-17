@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="./dist/bundle.css" rel="stylesheet">
+    <title>Pokedex (CDN)</title>
+
+    <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
 </head>
 <body>
+    <div id="content"></div>
+    <script>
+        const P = new Pokedex.Pokedex()
+        const interval ={
+            offset: 34,
+            limit: 10,
+        }
+        const content = document.getElementById("content");
+
+        p.getPokemonsList(interval).then(function(response) {
+            response.results.forEach(element =>{
+
+            })
+        })
+      </script>
+      hello ?????
     
 </body>
 </html>
