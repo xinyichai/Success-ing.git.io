@@ -28,3 +28,142 @@
     made!!!!!
 </body>
 </html>
+<style>
+    .pokemon {
+width: 200px;
+height: 200px;
+/* center content using flex box */
+display: flex;
+justify-content: center;
+align-items: center;
+/* overlay */
+box-shadow: 0 0 0 100px inset, 0 0 5px grey;
+/* hover out transition */
+transition: box-shadow 1s;
+float: left;
+margin: 10px;
+}
+
+
+/* pokemone names */
+
+.pokemon::after {
+width: 80%;
+height: 80%;
+display: block;
+white-space: pre;
+font: 15pt 'sigmar one';
+color: white;
+border: 2px solid;
+text-align: center;
+/* center content using flex box */
+display: flex;
+justify-content: center;
+align-items: center;
+/* hover out transition */
+transition: opacity 1s .5s;
+}
+
+
+/* reveal pokemone picture on hover */
+
+.pokemon:hover {
+box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+transition: box-shadow 1s;
+}
+
+
+/* hide pokemone name on hover */
+
+.pokemon:hover::after {
+opacity: 0;
+transition: opacity .5s;
+}
+
+#bulbasaur {
+background-image: url(http://vignette4.wikia.nocookie.net/pokemon/images/2/21/001Bulbasaur.png/revision/latest/scale-to-width-down/200?cb=20140328190757);
+color: rgba(71, 121, 94, .9);
+}
+
+#bulbasaur::after {
+content: 'Bulbasaur';
+}
+
+#charmander {
+background-image: url(http://vignette2.wikia.nocookie.net/pokemon/images/7/73/004Charmander.png/revision/latest/scale-to-width-down/200?cb=20140724195345);
+color: rgba(221, 86, 63, .9);
+}
+
+#charmander::after {
+content: 'Charmander'
+}
+
+#squirtle {
+background-image: url(http://vignette2.wikia.nocookie.net/pokemon/images/3/39/007Squirtle.png/revision/latest/scale-to-width-down/200?cb=20140328191525);
+color: rgba(65, 102, 114, .9);
+}
+
+#squirtle::after {
+content: 'Squirtle'
+}
+
+#pikachu {
+background-image: url(http://vignette2.wikia.nocookie.net/pokemon/images/0/0d/025Pikachu.png/revision/latest/scale-to-width-down/200?cb=20140328192412);
+color: rgba(179, 152, 98, .9);
+}
+
+#pikachu::after {
+content: 'Pikachu'
+}
+
+#wrapper {
+width: 500px;
+height: 500px;
+margin:  auto;
+}
+</style>
+
+<div id="wrapper">
+<div id="bulbasaur" class="pokemon"></div>
+<div id="charmander" class="pokemon"></div>
+<div id="squirtle" class="pokemon"></div>
+<div id="pikachu" class="pokemon"></div>
+</div>
+
+<!--image glow-->
+
+<style>
+figure {
+position: relative;
+padding: 0;
+width: 500px;
+max-width: 90vw;
+margin: 25px auto;
+}
+
+figure::after {
+content: ' ';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: -1;
+background-image: url(https://images.unsplash.com/photo-1504197885-609741792ce7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80);
+background-size: 100% 100%;
+filter: blur(15px) saturate(2); /* KEY */
+}
+
+img {
+display: block;
+width: 100%;
+height: auto;
+border-radius: 3px;
+}
+
+</style>
+
+
+<figure>
+<img src="https://images.unsplash.com/photo-1504197885-609741792ce7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="" />
+</figure>
