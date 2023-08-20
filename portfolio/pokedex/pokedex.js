@@ -63,4 +63,11 @@ async function startApp() {
   
 // Start the app when the DOM is loaded
 document.addEventListener("DOMContentLoaded", startApp);
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/path/to/your/service-worker.js');
+    });
+  }
+  
   

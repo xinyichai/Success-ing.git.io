@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@popperjs/core": "^2.11.8",
     "@tailwindcss/forms": "^0.5.4",
     "autoprefixer": "^10.4.15",
+    "bootstrap": "^5.3.1",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "mini-css-extract-plugin": "^2.7.6",
@@ -13,5 +16,12 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
