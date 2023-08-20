@@ -7,8 +7,18 @@ class PokemonService {
         this.pokedex = new Pokedex.Pokedex();
     }
 
-    async getPokemonsList(limit = 20) {
+    async getPokemonsList(offset = 0, limit = 20) {
         try {
+            var promises = []
+
+            this.pokedex.getPokemonsList({offset,limit}).then(function(response){
+                response.results.forEach(element => {
+                    var promises = this.pokede.getPokemonByName(element.name)
+                    promises.push(promise)
+                 }); 
+                 
+                 console.log(promise)
+            })
         } catch (error) {
             throw new Error("Error fetching Pokémon data");
         }
@@ -31,7 +41,7 @@ class HtmlBuilder {
     }
   
     displayPokemonCards(pokemons) {
-         
+         this.createCard()
     }
 }
   
