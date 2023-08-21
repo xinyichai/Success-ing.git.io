@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        './index.html', // Your HTML file in the root folder
+        'pokedex.html', // Your HTML file in the root folder
         './portfolio/**/*.{html,js}',
     ],
     theme: {

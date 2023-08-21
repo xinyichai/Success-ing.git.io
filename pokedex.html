@@ -3,29 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/bundle.css" rel="stylesheet">
-    <link href="../../dist/bundle.css" rel="stylesheet">
+    <link href="dist/bundle.css" rel="stylesheet">
+
     <title>Pokedex (CDN)</title>
 
     <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
 </head>
 <body>
-    <div id="content"></div>
-    <script>
-        const P = new Pokedex.Pokedex()
-        const interval ={
-            offset: 34,
-            limit: 10,
-        }
-        ;
-
-        p.getPokemonsList(interval).then(function(response) {
-            response.results.forEach(element =>{
-                content.innerHTML += element.name + '<br>'
-            });
-        })
-      </script>
-      
 
 <style>
   
@@ -470,18 +454,16 @@ function showSlides() {
           <!-- Pokedex Content -->
           <div id="content-wrapper" class="bg-white border border-2 border-gray-700 h-full shadow-inner shadow-black overflow-auto">
               <div id="content" class="p-5">
-                  whyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+                <ol id="pokedex"></ol>
               </div>
           </div>
       </div> 
   </div>
 </div>
-<script src="../../dist/bundle.js"></script>
-<script src="../../dist/pokeapi-js-wrapper.js"></script>
-<script src="./pokedex.js"></script>
 
-
-
+<script src="dist/bundle.js"></script>
+<script src="dist/pokeapi-js-wrapper.js"></script>
+<script src="pokedex.js"></script>
 
 
 </body>
