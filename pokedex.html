@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="dist/bundle.css" rel="stylesheet">
 
-    <title>Pokedex (CDN)</title>
+    <title>Pokedex</title>
 
     <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
 </head>
@@ -420,7 +420,12 @@ function showSlides() {
         <p>&copy; 2023 Your Website. All rights reserved.</p>
     </div>
 </footer>
-<div class="container mx-auto pt-10 h-screen">
+<a href="/pokedex.html"><img src="poke.png" alt=""></a>
+<form if ="form"><input type="text" id="search" class="search" 
+placeholder="Search your Pokemon"></form>
+<div id ="poke_container" class = "poke_container"></div>
+
+</form><div class="container mx-auto pt-10 h-screen">
   <div class="bg-red-600 border-gray-700 flex flex-col h-full rounded-lg shadow-lg shadow-red-500">
       <div class="flex gap-2 pt-5 pl-5 ">
           <div class="relative">
@@ -449,7 +454,9 @@ function showSlides() {
           <!-- Pokedex Content -->
           <div id="content-wrapper" class="bg-white border border-2 border-gray-700 h-full shadow-inner shadow-black overflow-auto">
               <div id="content" class="p-5">
-                <ol id="pokedex" class="scroll"></ol>
+                
+
+                </div>
               </div>
           </div>
       </div> 
